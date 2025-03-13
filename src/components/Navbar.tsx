@@ -39,7 +39,7 @@ const Navbar = () => {
             className="flex items-center space-x-2 group"
           >
             <img 
-              src="/public/lovable-uploads/86392433-b8ac-473c-a04e-7bb77caafe40.png" 
+              src="/public/lovable-uploads/735a450b-98c6-40b3-8d7c-27f1814041b0.png" 
               alt="Linx Global Logo" 
               className="h-10 transition-transform duration-300 group-hover:scale-110" 
             />

@@ -11,7 +11,7 @@ const HeroSection = () => {
 
   return (
     <div className="relative min-h-screen flex items-center overflow-hidden">
-      <div className="absolute inset-0 bg-[url('/public/lovable-uploads/86392433-b8ac-473c-a04e-7bb77caafe40.png')] bg-cover bg-center opacity-10"></div>
+      <div className="absolute inset-0 bg-[url('/public/lovable-uploads/845ec2b7-27ec-4002-abe3-11f8d77b01fe.png')] bg-cover bg-center opacity-10"></div>
       <div className="absolute inset-0 bg-gradient-to-b from-background/10 to-background"></div>
       
       <div className="container mx-auto px-4 md:px-6 z-10">
@@ -42,9 +42,11 @@ const HeroSection = () => {
             <div className="relative float h-[400px] w-[400px] rounded-full bg-primary/5 border border-primary/20 p-6">
               <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-primary/10 to-transparent"></div>
               <div className="h-full w-full rounded-full glassmorphism flex items-center justify-center">
-                <div className="text-6xl font-bold text-primary glow-text">
-                  LINX
-                </div>
+                <img 
+                  src="/public/lovable-uploads/735a450b-98c6-40b3-8d7c-27f1814041b0.png" 
+                  alt="Linx Global Logo" 
+                  className="h-48 w-48 object-contain transition-transform duration-500 hover:scale-110" 
+                />
               </div>
             </div>
           </div>

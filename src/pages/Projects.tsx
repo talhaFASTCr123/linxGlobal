@@ -11,7 +11,7 @@ const Projects = () => {
       id: 1,
       title: "Fatima Jinnah Institute of Dental Sciences",
       category: "Government",
-      image: "/public/lovable-uploads/86392433-b8ac-473c-a04e-7bb77caafe40.png",
+      image: "/public/lovable-uploads/efcb15b5-0636-43d6-9a63-d791708e12c8.png",
       description: "Architecture & Consultancy including layouts, equipment installation, and commissioning.",
       scope: "Architecture & Consultancy (Layouts, Equipment Installation, Commissioning)",
       cost: "350 Million"
@@ -20,7 +20,7 @@ const Projects = () => {
       id: 2,
       title: "Premium Flour Mill & Moon Flour Mill",
       category: "Industrial",
-      image: "/public/lovable-uploads/86392433-b8ac-473c-a04e-7bb77caafe40.png",
+      image: "/public/lovable-uploads/845ec2b7-27ec-4002-abe3-11f8d77b01fe.png",
       description: "Comprehensive solution encompassing consultancy, architectural design, structural engineering, commissioning, and execution.",
       scope: "Consultancy, Architectural, Structural, Commissioning, Execution",
       cost: "150 Million"
@@ -29,7 +29,7 @@ const Projects = () => {
       id: 3,
       title: "Qaswa Flour Mill",
       category: "Industrial",
-      image: "/public/lovable-uploads/86392433-b8ac-473c-a04e-7bb77caafe40.png",
+      image: "/public/lovable-uploads/a43f94c8-004a-46b2-901b-008a9b4e6613.png",
       description: "Complete turn-key solution from initial consultancy through execution and commissioning phases.",
       scope: "Turn-key Solution (Consultancy, Execution, Commissioning)",
       cost: "200 Million"
@@ -47,7 +47,7 @@ const Projects = () => {
       id: 5,
       title: "Pharmaceutical Warehouse Office, Gujranwala",
       category: "Commercial",
-      image: "/public/lovable-uploads/86392433-b8ac-473c-a04e-7bb77caafe40.png",
+      image: "/public/lovable-uploads/e1bac44f-b8df-4113-8e92-415027f2dff1.png",
       description: "Interior and infrastructure development including flooring, electrical, plumbing, and finishing works.",
       scope: "Flooring, Electrical, Plumbing, Finishing Works",
       cost: "10 Million"

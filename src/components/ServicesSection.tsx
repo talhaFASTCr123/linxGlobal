@@ -107,11 +107,11 @@ const ServicesSection = () => {
             <div className="h-1 w-16 bg-primary mb-6 rounded glow"></div>
           </div>
           
-          <div className="flex flex-wrap justify-center gap-8 mb-12">
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
             {affiliations.map((affiliation, index) => (
               <div 
                 key={index}
-                className="text-white font-bold text-lg hover:text-primary transition-colors duration-300 cursor-pointer"
+                className="px-4 py-2 rounded-full border border-primary/20 bg-primary/5 text-white font-medium hover-neon cursor-pointer transition-all duration-300"
                 onClick={() => copyToClipboard(affiliation, "Affiliation name")}
               >
                 {affiliation}
@@ -129,11 +129,11 @@ const ServicesSection = () => {
             <div className="h-1 w-16 bg-primary mb-6 rounded glow"></div>
           </div>
           
-          <div className="flex flex-wrap justify-center gap-8">
+          <div className="flex flex-wrap justify-center gap-4">
             {learningHubs.map((hub, index) => (
               <div 
                 key={index}
-                className="text-white font-bold text-lg hover:text-primary transition-colors duration-300 cursor-pointer"
+                className="px-4 py-2 rounded-full border border-primary/20 bg-primary/5 text-white font-medium hover-neon cursor-pointer transition-all duration-300"
                 onClick={() => copyToClipboard(hub, "Learning hub name")}
               >
                 {hub}

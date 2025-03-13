@@ -1,6 +1,6 @@
 
 import { Link } from 'react-router-dom';
-import { Facebook, Instagram, Mail, Linkedin, ArrowUp } from 'lucide-react';
+import { Facebook, Instagram, Mail, ArrowUp } from 'lucide-react';
 import { useToast } from "@/hooks/use-toast";
 
 const Footer = () => {
@@ -75,16 +75,6 @@ const Footer = () => {
                 }}
               >
                 <Instagram size={18} />
-              </a>
-              <a 
-                href="#linkedin" 
-                className="h-9 w-9 rounded-full bg-primary/10 hover:bg-primary/20 text-primary flex items-center justify-center transition-colors"
-                onClick={(e) => {
-                  e.preventDefault();
-                  copyToClipboard("Linx Global LinkedIn", "LinkedIn");
-                }}
-              >
-                <Linkedin size={18} />
               </a>
             </div>
           </div>

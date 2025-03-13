@@ -34,8 +34,25 @@ const Index = () => {
       observer.observe(element);
     });
 
+    // Make sure the scroll-to-top button works correctly
+    const handleScroll = () => {
+      const scrollToTopButton = document.querySelector('.scroll-to-top-button');
+      if (scrollToTopButton) {
+        if (window.scrollY > 300) {
+          scrollToTopButton.classList.add('opacity-100');
+          scrollToTopButton.classList.remove('opacity-0');
+        } else {
+          scrollToTopButton.classList.add('opacity-0');
+          scrollToTopButton.classList.remove('opacity-100');
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
     return () => {
       observer.disconnect();
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
