@@ -6,6 +6,7 @@ import AboutSection from '@/components/AboutSection';
 import ServicesSection from '@/components/ServicesSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
+import ScrollToTop from '@/components/ui/scroll-to-top';
 
 const Index = () => {
   useEffect(() => {
@@ -45,6 +46,7 @@ const Index = () => {
       <ServicesSection />
       <ContactSection />
       <Footer />
+      <ScrollToTop />
     </div>
   );
 };

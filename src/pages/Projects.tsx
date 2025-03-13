@@ -2,51 +2,55 @@
 import { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import ScrollToTop from '@/components/ui/scroll-to-top';
 
 const Projects = () => {
-  // Sample project data
+  // Project data with the provided information
   const projects = [
     {
       id: 1,
-      title: "Modern Office Complex",
-      category: "Commercial Construction",
-      image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=600&auto=format&fit=crop",
-      description: "A state-of-the-art office complex featuring sustainable materials and energy-efficient design."
+      title: "Fatima Jinnah Institute of Dental Sciences",
+      category: "Government",
+      image: "https://images.unsplash.com/photo-1629830951632-cc317fe6ec56?q=80&w=600&auto=format&fit=crop",
+      description: "Architecture & Consultancy including layouts, equipment installation, and commissioning.",
+      scope: "Architecture & Consultancy (Layouts, Equipment Installation, Commissioning)",
+      cost: "350 Million"
     },
     {
       id: 2,
-      title: "Eco-Friendly Residential Community",
-      category: "Residential Architecture",
-      image: "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=600&auto=format&fit=crop",
-      description: "Sustainable residential community with solar integration and green spaces."
+      title: "Premium Flour Mill & Moon Flour Mill",
+      category: "Industrial",
+      image: "https://images.unsplash.com/photo-1578252346336-fc2c56a36287?q=80&w=600&auto=format&fit=crop",
+      description: "Comprehensive solution encompassing consultancy, architectural design, structural engineering, commissioning, and execution.",
+      scope: "Consultancy, Architectural, Structural, Commissioning, Execution",
+      cost: "150 Million"
     },
     {
       id: 3,
-      title: "Luxury Hotel Furniture",
-      category: "Custom Furniture",
-      image: "https://images.unsplash.com/photo-1631679706909-1844bbd07221?q=80&w=600&auto=format&fit=crop",
-      description: "Bespoke furniture pieces designed for a five-star hotel, combining comfort and elegance."
+      title: "Qaswa Flour Mill",
+      category: "Industrial",
+      image: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=600&auto=format&fit=crop",
+      description: "Complete turn-key solution from initial consultancy through execution and commissioning phases.",
+      scope: "Turn-key Solution (Consultancy, Execution, Commissioning)",
+      cost: "200 Million"
     },
     {
       id: 4,
-      title: "Corporate Solar Installation",
-      category: "Solar Energy",
-      image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=600&auto=format&fit=crop",
-      description: "Large-scale solar panel installation for a corporate campus, reducing carbon footprint."
+      title: "New City Mankera",
+      category: "Residential",
+      image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=600&auto=format&fit=crop",
+      description: "Residential development with focus on construction quality and structural integrity.",
+      scope: "Construction & Structural Execution",
+      cost: "10.5 Million"
     },
     {
       id: 5,
-      title: "Urban Retail Center",
-      category: "Commercial Architecture",
-      image: "https://images.unsplash.com/photo-1485628390555-1a7bd503f9fe?q=80&w=600&auto=format&fit=crop",
-      description: "Modern retail center designed to maximize visitor experience and energy efficiency."
-    },
-    {
-      id: 6,
-      title: "Minimalist Home Design",
-      category: "Residential Architecture",
-      image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=600&auto=format&fit=crop",
-      description: "Contemporary home design focused on clean lines and functional spaces."
+      title: "Pharmaceutical Warehouse Office, Gujranwala",
+      category: "Commercial",
+      image: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=600&auto=format&fit=crop",
+      description: "Interior and infrastructure development including flooring, electrical, plumbing, and finishing works.",
+      scope: "Flooring, Electrical, Plumbing, Finishing Works",
+      cost: "10 Million"
     }
   ];
 
@@ -92,8 +96,8 @@ const Projects = () => {
             </h1>
             <div className="h-1 w-20 bg-primary mx-auto mb-8 rounded glow"></div>
             <p className="text-muted-foreground text-lg mb-8">
-              Explore our portfolio of completed projects spanning construction, architecture, 
-              furniture design, and solar energy installations.
+              Explore our portfolio of completed projects spanning government, industrial, 
+              residential, and commercial sectors.
             </p>
           </div>
         </div>
@@ -106,7 +110,7 @@ const Projects = () => {
             {projects.map((project, index) => (
               <div 
                 key={project.id}
-                className="gradient-border glassmorphism rounded-lg overflow-hidden transition-all duration-300 hover:translate-y-[-5px] fade-in-up"
+                className="gradient-border glassmorphism rounded-lg overflow-hidden transition-all duration-500 hover:translate-y-[-8px] hover:shadow-[0_0_20px_rgba(46,213,115,0.3)] fade-in-up"
                 style={{ animationDelay: `${0.1 * (index + 1)}s` }}
               >
                 <div className="relative h-60 overflow-hidden">
@@ -127,6 +131,18 @@ const Projects = () => {
                   <p className="text-muted-foreground text-sm mb-4">
                     {project.description}
                   </p>
+                  
+                  <div className="space-y-2 mb-4">
+                    <div className="flex items-start">
+                      <span className="text-xs font-medium text-primary mr-2">Scope:</span>
+                      <span className="text-xs text-muted-foreground">{project.scope}</span>
+                    </div>
+                    <div className="flex items-start">
+                      <span className="text-xs font-medium text-primary mr-2">Project Cost:</span>
+                      <span className="text-xs text-muted-foreground">{project.cost}</span>
+                    </div>
+                  </div>
+                  
                   <a 
                     href="#" 
                     className="inline-flex items-center text-primary text-sm font-medium hover:underline"
@@ -152,28 +168,8 @@ const Projects = () => {
         </div>
       </section>
 
-      {/* Contact CTA */}
-      <section className="py-20 md:py-28 bg-muted/30">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Start Your <span className="text-primary glow-text">Project</span>?
-            </h2>
-            <p className="text-muted-foreground text-lg mb-8">
-              Contact us today to discuss your ideas and how we can bring them to life.
-              Our team is ready to deliver exceptional results for your next venture.
-            </p>
-            <a 
-              href="/#contact" 
-              className="inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-primary-foreground font-medium text-sm shadow-lg shadow-primary/20 hover:bg-primary/90 transition-colors"
-            >
-              Get in Touch
-            </a>
-          </div>
-        </div>
-      </section>
-
       <Footer />
+      <ScrollToTop />
     </div>
   );
 };

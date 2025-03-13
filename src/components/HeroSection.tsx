@@ -28,18 +28,12 @@ const HeroSection = () => {
               Specializing in construction, architecture, furniture, and solar energy solutions 
               for a sustainable tomorrow.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div>
               <a 
                 href="#services" 
-                className="inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-primary-foreground font-medium text-sm shadow-lg shadow-primary/20 hover:bg-primary/90 transition-colors"
+                className="inline-flex items-center justify-center rounded-md bg-primary px-8 py-4 text-primary-foreground font-medium text-base shadow-lg shadow-primary/20 hover:bg-primary/90 transition-colors"
               >
                 Our Services
-              </a>
-              <a 
-                href="#contact" 
-                className="inline-flex items-center justify-center rounded-md border border-input bg-background/50 backdrop-blur-sm px-6 py-3 text-foreground hover:bg-accent/10 font-medium text-sm transition-colors"
-              >
-                Get in Touch
               </a>
             </div>
           </div>

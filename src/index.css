@@ -61,6 +61,18 @@
   }
 }
 
+@keyframes glowCard {
+  0% {
+    box-shadow: 0 0 5px 0px hsl(var(--primary) / 0.2);
+  }
+  50% {
+    box-shadow: 0 0 15px 3px hsl(var(--primary) / 0.4);
+  }
+  100% {
+    box-shadow: 0 0 5px 0px hsl(var(--primary) / 0.2);
+  }
+}
+
 @keyframes float {
   0% {
     transform: translateY(0px);
@@ -122,6 +134,12 @@
   position: relative;
   border-radius: theme('borderRadius.lg');
   overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+.gradient-border:hover {
+  animation: glowCard 3s infinite ease-in-out;
+  transform: translateY(-8px);
 }
 
 .gradient-border::before {
@@ -140,4 +158,9 @@
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   pointer-events: none;
+}
+
+.gradient-border:hover::before {
+  padding: 2px;
+  background: linear-gradient(to right, hsl(var(--primary)), hsl(var(--primary)), hsl(var(--accent)));
 }

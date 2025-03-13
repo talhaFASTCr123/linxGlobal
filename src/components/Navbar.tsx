@@ -43,8 +43,8 @@ const Navbar = () => {
             </span>
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
+          {/* Desktop Navigation - Centered */}
+          <div className="hidden md:flex space-x-8 mx-auto">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
@@ -61,12 +61,10 @@ const Navbar = () => {
                 )}
               </Link>
             ))}
-            <a 
-              href="#contact" 
-              className="px-4 py-2 rounded-md bg-primary text-primary-foreground font-medium text-sm hover:opacity-90 transition-opacity"
-            >
-              Contact Us
-            </a>
+          </div>
+
+          <div className="hidden md:block">
+            {/* Empty div to maintain spacing for centered nav */}
           </div>
 
           {/* Mobile Menu Button */}
@@ -98,11 +96,11 @@ const Navbar = () => {
               </Link>
             ))}
             <a 
-              href="#contact" 
+              href="#services" 
               className="px-4 py-2 rounded-md bg-primary text-primary-foreground font-medium text-sm hover:opacity-90 transition-opacity w-full text-center"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Contact Us
+              Our Services
             </a>
           </div>
         </div>

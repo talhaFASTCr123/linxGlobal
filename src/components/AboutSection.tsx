@@ -11,13 +11,13 @@ const AboutSection = () => {
           </h2>
           <div className="h-1 w-20 bg-primary mb-8 rounded glow"></div>
           <p className="text-muted-foreground max-w-2xl text-lg">
-            Linx Global delivers exceptional construction, architecture, furniture, and energy solutions 
-            through innovation, sustainability, and client-focused approaches.
+            Linx Global provides turnkey solutions in construction, architecture, and furniture 
+            with high-quality service and unique designs tailored to our clients' needs.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
-          <div className="gradient-border p-6 glassmorphism rounded-lg flex flex-col items-center text-center fade-in-up" style={{ animationDelay: '0.1s' }}>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
+          <div className="gradient-border p-6 glassmorphism rounded-lg flex flex-col items-center text-center transition-all duration-500 hover:translate-y-[-8px] hover:shadow-[0_0_20px_rgba(46,213,115,0.3)] fade-in-up" style={{ animationDelay: '0.1s' }}>
             <div className="h-14 w-14 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-5">
               <Building2 size={24} />
             </div>
@@ -28,7 +28,7 @@ const AboutSection = () => {
             </p>
           </div>
 
-          <div className="gradient-border p-6 glassmorphism rounded-lg flex flex-col items-center text-center fade-in-up" style={{ animationDelay: '0.2s' }}>
+          <div className="gradient-border p-6 glassmorphism rounded-lg flex flex-col items-center text-center transition-all duration-500 hover:translate-y-[-8px] hover:shadow-[0_0_20px_rgba(46,213,115,0.3)] fade-in-up" style={{ animationDelay: '0.2s' }}>
             <div className="h-14 w-14 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-5">
               <Lightbulb size={24} />
             </div>
@@ -39,7 +39,7 @@ const AboutSection = () => {
             </p>
           </div>
 
-          <div className="gradient-border p-6 glassmorphism rounded-lg flex flex-col items-center text-center fade-in-up" style={{ animationDelay: '0.3s' }}>
+          <div className="gradient-border p-6 glassmorphism rounded-lg flex flex-col items-center text-center transition-all duration-500 hover:translate-y-[-8px] hover:shadow-[0_0_20px_rgba(46,213,115,0.3)] fade-in-up" style={{ animationDelay: '0.3s' }}>
             <div className="h-14 w-14 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-5">
               <Shield size={24} />
             </div>
@@ -50,14 +50,14 @@ const AboutSection = () => {
             </p>
           </div>
 
-          <div className="gradient-border p-6 glassmorphism rounded-lg flex flex-col items-center text-center fade-in-up" style={{ animationDelay: '0.4s' }}>
+          <div className="gradient-border p-6 glassmorphism rounded-lg flex flex-col items-center text-center transition-all duration-500 hover:translate-y-[-8px] hover:shadow-[0_0_20px_rgba(46,213,115,0.3)] fade-in-up" style={{ animationDelay: '0.4s' }}>
             <div className="h-14 w-14 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-5">
               <Leaf size={24} />
             </div>
             <h3 className="text-xl font-semibold mb-3">Sustainability</h3>
             <p className="text-muted-foreground">
               Environmental responsibility is at our core. We integrate sustainable practices 
-              and materials in all our projects, from green construction to solar energy solutions.
+              and materials in all our projects, from green construction to innovative design solutions.
             </p>
           </div>
         </div>

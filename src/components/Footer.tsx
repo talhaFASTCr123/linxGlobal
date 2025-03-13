@@ -20,7 +20,7 @@ const Footer = () => {
             </h3>
             <p className="text-muted-foreground mb-4">
               Building a sustainable future through innovative construction, 
-              architecture, furniture, and solar energy solutions.
+              architecture, and furniture solutions.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="h-9 w-9 rounded-full bg-primary/10 hover:bg-primary/20 text-primary flex items-center justify-center transition-colors">
@@ -55,17 +55,21 @@ const Footer = () => {
               <li><a href="#services" className="text-muted-foreground hover:text-primary transition-colors">Construction</a></li>
               <li><a href="#services" className="text-muted-foreground hover:text-primary transition-colors">Architecture</a></li>
               <li><a href="#services" className="text-muted-foreground hover:text-primary transition-colors">Furniture</a></li>
-              <li><a href="#services" className="text-muted-foreground hover:text-primary transition-colors">Solar Energy</a></li>
             </ul>
           </div>
           
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact</h3>
             <address className="not-italic text-muted-foreground space-y-2">
-              <p>123 Business Avenue, Suite 456</p>
-              <p>New York, NY 10001</p>
-              <p>Email: info@linxglobal.com</p>
-              <p>Phone: +1 (234) 567-890</p>
+              <p>Plaza CCA-73 Phase 5 DHA,</p>
+              <p>Lahore, Pakistan</p>
+              <p>Email: info@linx.global</p>
+              <div>
+                <p>Phone:</p>
+                <p>+92 304 4481444</p>
+                <p>+92 321 4975007</p>
+                <p>+92 302 7916572</p>
+              </div>
             </address>
           </div>
         </div>
