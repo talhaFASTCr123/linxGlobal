@@ -1,6 +1,6 @@
 
 import { Link } from 'react-router-dom';
-import { Facebook, Instagram, Mail, ArrowUp } from 'lucide-react';
+import { Facebook, Instagram, Mail, ArrowUp, Youtube } from 'lucide-react';
 import { useToast } from "@/hooks/use-toast";
 
 const Footer = () => {
@@ -76,6 +76,19 @@ const Footer = () => {
               >
                 <Instagram size={18} />
               </a>
+              <a 
+                href="https://youtube.com/@linxglobal-g8t?si=Yu_jbecV3uvdbi1R" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="h-9 w-9 rounded-full bg-primary/10 hover:bg-primary/20 text-primary flex items-center justify-center transition-colors"
+                onClick={(e) => {
+                  e.preventDefault();
+                  copyToClipboard("https://youtube.com/@linxglobal-g8t?si=Yu_jbecV3uvdbi1R", "YouTube URL");
+                  window.open("https://youtube.com/@linxglobal-g8t?si=Yu_jbecV3uvdbi1R", "_blank");
+                }}
+              >
+                <Youtube size={18} />
+              </a>
             </div>
           </div>
           
@@ -150,8 +163,8 @@ const Footer = () => {
             &copy; {new Date().getFullYear()} Linx Global. All rights reserved.
           </p>
           <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6">
-            <a href="#" className="text-muted-foreground hover:text-primary text-sm transition-colors">Privacy Policy</a>
-            <a href="#" className="text-muted-foreground hover:text-primary text-sm transition-colors">Terms of Service</a>
+            <Link to="/privacy-policy" className="text-muted-foreground hover:text-primary text-sm transition-colors">Privacy Policy</Link>
+            <Link to="/terms-of-service" className="text-muted-foreground hover:text-primary text-sm transition-colors">Terms of Service</Link>
             <button 
               onClick={scrollToTop}
               className="h-10 w-10 rounded-full bg-primary/10 hover:bg-primary/20 text-primary flex items-center justify-center transition-colors fixed bottom-6 right-6 z-50"

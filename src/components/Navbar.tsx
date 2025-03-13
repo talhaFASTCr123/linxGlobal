@@ -21,6 +21,13 @@ const Navbar = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   const navLinks = [
     { name: 'Home', path: '/' },
     { name: 'Projects', path: '/projects' },
@@ -67,9 +74,14 @@ const Navbar = () => {
             </div>
           </div>
 
-          {/* Right-aligned empty space to maintain layout */}
-          <div className="hidden md:block w-[100px]">
-            {/* Empty div to maintain spacing */}
+          {/* Right-aligned get in touch button */}
+          <div className="hidden md:block">
+            <button 
+              onClick={scrollToContact}
+              className="px-4 py-2 rounded-md border border-primary bg-primary/10 text-primary hover:bg-primary/20 transition-colors"
+            >
+              Get in Touch
+            </button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -107,6 +119,15 @@ const Navbar = () => {
             >
               Our Services
             </a>
+            <button 
+              onClick={() => {
+                scrollToContact();
+                setIsMobileMenuOpen(false);
+              }}
+              className="px-4 py-2 rounded-md border border-primary bg-primary/10 text-primary hover:bg-primary/20 transition-colors w-full text-center"
+            >
+              Get in Touch
+            </button>
           </div>
         </div>
       )}

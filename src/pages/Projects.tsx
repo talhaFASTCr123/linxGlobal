@@ -110,7 +110,7 @@ const Projects = () => {
             {projects.map((project, index) => (
               <div 
                 key={project.id}
-                className="gradient-border glassmorphism rounded-lg overflow-hidden transition-all duration-500 hover:translate-y-[-8px] hover:shadow-[0_0_20px_rgba(46,213,115,0.3)] fade-in-up"
+                className="project-card gradient-border glassmorphism rounded-lg overflow-hidden transition-all duration-500 hover:translate-y-[-8px] hover:shadow-[0_0_20px_rgba(46,213,115,0.3)] fade-in-up"
                 style={{ animationDelay: `${0.1 * (index + 1)}s` }}
               >
                 <div className="relative h-60 overflow-hidden">
@@ -126,7 +126,7 @@ const Projects = () => {
                     </span>
                   </div>
                 </div>
-                <div className="p-6">
+                <div className="p-6 card-content">
                   <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
                   <p className="text-muted-foreground text-sm mb-4">
                     {project.description}

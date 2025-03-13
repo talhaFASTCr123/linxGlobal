@@ -42,11 +42,12 @@ const HeroSection = () => {
             <div className="relative float h-[400px] w-[400px] rounded-full bg-primary/5 border border-primary/20 p-6">
               <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-primary/10 to-transparent"></div>
               <div className="h-full w-full rounded-full glassmorphism flex items-center justify-center">
-                <img 
-                  src="/public/lovable-uploads/735a450b-98c6-40b3-8d7c-27f1814041b0.png" 
-                  alt="Linx Global Logo" 
-                  className="h-48 w-48 object-contain transition-transform duration-500 hover:scale-110" 
-                />
+                <div className="flex items-center justify-center">
+                  <h1 className="text-4xl font-bold">
+                    <span className="text-white">Linx</span>
+                    <span className="text-primary glow-text">Global</span>
+                  </h1>
+                </div>
               </div>
             </div>
           </div>

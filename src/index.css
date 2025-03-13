@@ -177,3 +177,30 @@
   background-color: rgba(46, 213, 115, 0.15);
   border-color: rgba(46, 213, 115, 0.4);
 }
+
+/* Project card hover effect */
+.project-card .card-content {
+  transition: all 0.3s ease;
+}
+
+.project-card:hover .card-content {
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+}
+
+.project-card:hover .card-content .text-muted-foreground {
+  color: hsl(var(--primary-foreground) / 0.7);
+}
+
+.project-card:hover .card-content .text-primary {
+  color: hsl(var(--background));
+  font-weight: 600;
+}
+
+/* Fix for the scroll-to-top button alignment */
+.scroll-to-top-button {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 50;
+}

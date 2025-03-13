@@ -41,6 +41,8 @@ const Index = () => {
         if (window.scrollY > 300) {
           scrollToTopButton.classList.add('opacity-100');
           scrollToTopButton.classList.remove('opacity-0');
+          scrollToTopButton.classList.add('fixed');
+          scrollToTopButton.classList.remove('absolute');
         } else {
           scrollToTopButton.classList.add('opacity-0');
           scrollToTopButton.classList.remove('opacity-100');
