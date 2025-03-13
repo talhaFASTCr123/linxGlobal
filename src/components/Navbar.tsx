@@ -36,35 +36,40 @@ const Navbar = () => {
         <div className="flex items-center justify-between">
           <Link 
             to="/" 
-            className="flex items-center space-x-2"
+            className="flex items-center space-x-2 group"
           >
-            <span className="text-2xl font-bold text-white">
-              Linx<span className="text-primary glow-text">Global</span>
-            </span>
+            <img 
+              src="/public/lovable-uploads/86392433-b8ac-473c-a04e-7bb77caafe40.png" 
+              alt="Linx Global Logo" 
+              className="h-10 transition-transform duration-300 group-hover:scale-110" 
+            />
           </Link>
 
           {/* Desktop Navigation - Centered */}
-          <div className="hidden md:flex space-x-8 mx-auto">
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                to={link.path}
-                className={`relative text-sm font-medium transition-colors hover:text-primary ${
-                  location.pathname === link.path 
-                    ? 'text-primary' 
-                    : 'text-muted-foreground'
-                }`}
-              >
-                {link.name}
-                {location.pathname === link.path && (
-                  <span className="absolute -bottom-1 left-0 h-0.5 w-full bg-primary glow" />
-                )}
-              </Link>
-            ))}
+          <div className="flex-1 flex justify-center">
+            <div className="hidden md:flex space-x-8">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.name}
+                  to={link.path}
+                  className={`relative text-sm font-medium transition-colors hover:text-primary ${
+                    location.pathname === link.path 
+                      ? 'text-primary' 
+                      : 'text-muted-foreground'
+                  }`}
+                >
+                  {link.name}
+                  {location.pathname === link.path && (
+                    <span className="absolute -bottom-1 left-0 h-0.5 w-full bg-primary glow" />
+                  )}
+                </Link>
+              ))}
+            </div>
           </div>
 
-          <div className="hidden md:block">
-            {/* Empty div to maintain spacing for centered nav */}
+          {/* Right-aligned empty space to maintain layout */}
+          <div className="hidden md:block w-[100px]">
+            {/* Empty div to maintain spacing */}
           </div>
 
           {/* Mobile Menu Button */}

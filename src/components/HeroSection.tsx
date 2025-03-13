@@ -31,7 +31,7 @@ const HeroSection = () => {
             <div>
               <a 
                 href="#services" 
-                className="inline-flex items-center justify-center rounded-md bg-primary px-8 py-4 text-primary-foreground font-medium text-base shadow-lg shadow-primary/20 hover:bg-primary/90 transition-colors"
+                className="inline-flex items-center justify-center rounded-md bg-primary px-8 py-4 text-primary-foreground font-medium text-base shadow-lg shadow-primary/20 hover:bg-primary/90 transition-colors w-full sm:w-auto"
               >
                 Our Services
               </a>

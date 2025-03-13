@@ -1,13 +1,29 @@
 
 import { Link } from 'react-router-dom';
-import { Facebook, Twitter, Instagram, Linkedin, ArrowUp } from 'lucide-react';
+import { Facebook, Instagram, Mail, Linkedin, ArrowUp } from 'lucide-react';
+import { useToast } from "@/hooks/use-toast";
 
 const Footer = () => {
+  const { toast } = useToast();
+  
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
     });
+  };
+
+  const copyToClipboard = (text: string, label: string) => {
+    navigator.clipboard.writeText(text)
+      .then(() => {
+        toast({
+          title: "Copied to clipboard",
+          description: `${label} has been copied to your clipboard.`,
+        });
+      })
+      .catch((err) => {
+        console.error('Failed to copy text: ', err);
+      });
   };
 
   return (
@@ -23,16 +39,51 @@ const Footer = () => {
               architecture, and furniture solutions.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="h-9 w-9 rounded-full bg-primary/10 hover:bg-primary/20 text-primary flex items-center justify-center transition-colors">
+              <a 
+                href="https://www.facebook.com/linxglobalconstructions/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="h-9 w-9 rounded-full bg-primary/10 hover:bg-primary/20 text-primary flex items-center justify-center transition-colors"
+                onClick={(e) => {
+                  e.preventDefault();
+                  copyToClipboard("https://www.facebook.com/linxglobalconstructions/", "Facebook URL");
+                  window.open("https://www.facebook.com/linxglobalconstructions/", "_blank");
+                }}
+              >
                 <Facebook size={18} />
               </a>
-              <a href="#" className="h-9 w-9 rounded-full bg-primary/10 hover:bg-primary/20 text-primary flex items-center justify-center transition-colors">
-                <Twitter size={18} />
+              <a 
+                href="mailto:info@linx.global" 
+                className="h-9 w-9 rounded-full bg-primary/10 hover:bg-primary/20 text-primary flex items-center justify-center transition-colors"
+                onClick={(e) => {
+                  e.preventDefault();
+                  copyToClipboard("info@linx.global", "Email address");
+                  window.location.href = "mailto:info@linx.global";
+                }}
+              >
+                <Mail size={18} />
               </a>
-              <a href="#" className="h-9 w-9 rounded-full bg-primary/10 hover:bg-primary/20 text-primary flex items-center justify-center transition-colors">
+              <a 
+                href="https://www.instagram.com/linx.global?igsh=NGI3YzB5ZGRmeTFp" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="h-9 w-9 rounded-full bg-primary/10 hover:bg-primary/20 text-primary flex items-center justify-center transition-colors"
+                onClick={(e) => {
+                  e.preventDefault();
+                  copyToClipboard("https://www.instagram.com/linx.global?igsh=NGI3YzB5ZGRmeTFp", "Instagram URL");
+                  window.open("https://www.instagram.com/linx.global?igsh=NGI3YzB5ZGRmeTFp", "_blank");
+                }}
+              >
                 <Instagram size={18} />
               </a>
-              <a href="#" className="h-9 w-9 rounded-full bg-primary/10 hover:bg-primary/20 text-primary flex items-center justify-center transition-colors">
+              <a 
+                href="#linkedin" 
+                className="h-9 w-9 rounded-full bg-primary/10 hover:bg-primary/20 text-primary flex items-center justify-center transition-colors"
+                onClick={(e) => {
+                  e.preventDefault();
+                  copyToClipboard("Linx Global LinkedIn", "LinkedIn");
+                }}
+              >
                 <Linkedin size={18} />
               </a>
             </div>
@@ -61,14 +112,44 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact</h3>
             <address className="not-italic text-muted-foreground space-y-2">
-              <p>Plaza CCA-73 Phase 5 DHA,</p>
-              <p>Lahore, Pakistan</p>
-              <p>Email: info@linx.global</p>
+              <p 
+                className="cursor-pointer hover:text-primary transition-colors"
+                onClick={() => copyToClipboard("Plaza CCA-73 Phase 5 DHA, Lahore, Pakistan", "Address")}
+              >
+                Plaza CCA-73 Phase 5 DHA,
+              </p>
+              <p 
+                className="cursor-pointer hover:text-primary transition-colors"
+                onClick={() => copyToClipboard("Plaza CCA-73 Phase 5 DHA, Lahore, Pakistan", "Address")}
+              >
+                Lahore, Pakistan
+              </p>
+              <p 
+                className="cursor-pointer hover:text-primary transition-colors"
+                onClick={() => copyToClipboard("info@linx.global", "Email address")}
+              >
+                Email: info@linx.global
+              </p>
               <div>
                 <p>Phone:</p>
-                <p>+92 304 4481444</p>
-                <p>+92 321 4975007</p>
-                <p>+92 302 7916572</p>
+                <p 
+                  className="cursor-pointer hover:text-primary transition-colors"
+                  onClick={() => copyToClipboard("+92 304 4481444", "Phone number")}
+                >
+                  +92 304 4481444
+                </p>
+                <p 
+                  className="cursor-pointer hover:text-primary transition-colors"
+                  onClick={() => copyToClipboard("+92 321 4975007", "Phone number")}
+                >
+                  +92 321 4975007
+                </p>
+                <p 
+                  className="cursor-pointer hover:text-primary transition-colors"
+                  onClick={() => copyToClipboard("+92 302 7916572", "Phone number")}
+                >
+                  +92 302 7916572
+                </p>
               </div>
             </address>
           </div>
@@ -83,7 +164,7 @@ const Footer = () => {
             <a href="#" className="text-muted-foreground hover:text-primary text-sm transition-colors">Terms of Service</a>
             <button 
               onClick={scrollToTop}
-              className="h-10 w-10 rounded-full bg-primary/10 hover:bg-primary/20 text-primary flex items-center justify-center transition-colors"
+              className="h-10 w-10 rounded-full bg-primary/10 hover:bg-primary/20 text-primary flex items-center justify-center transition-colors fixed bottom-6 right-6 z-50"
               aria-label="Scroll to top"
             >
               <ArrowUp size={18} />

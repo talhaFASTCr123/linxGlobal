@@ -11,7 +11,7 @@ const Projects = () => {
       id: 1,
       title: "Fatima Jinnah Institute of Dental Sciences",
       category: "Government",
-      image: "https://images.unsplash.com/photo-1629830951632-cc317fe6ec56?q=80&w=600&auto=format&fit=crop",
+      image: "/public/lovable-uploads/86392433-b8ac-473c-a04e-7bb77caafe40.png",
       description: "Architecture & Consultancy including layouts, equipment installation, and commissioning.",
       scope: "Architecture & Consultancy (Layouts, Equipment Installation, Commissioning)",
       cost: "350 Million"
@@ -20,7 +20,7 @@ const Projects = () => {
       id: 2,
       title: "Premium Flour Mill & Moon Flour Mill",
       category: "Industrial",
-      image: "https://images.unsplash.com/photo-1578252346336-fc2c56a36287?q=80&w=600&auto=format&fit=crop",
+      image: "/public/lovable-uploads/86392433-b8ac-473c-a04e-7bb77caafe40.png",
       description: "Comprehensive solution encompassing consultancy, architectural design, structural engineering, commissioning, and execution.",
       scope: "Consultancy, Architectural, Structural, Commissioning, Execution",
       cost: "150 Million"
@@ -29,7 +29,7 @@ const Projects = () => {
       id: 3,
       title: "Qaswa Flour Mill",
       category: "Industrial",
-      image: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=600&auto=format&fit=crop",
+      image: "/public/lovable-uploads/86392433-b8ac-473c-a04e-7bb77caafe40.png",
       description: "Complete turn-key solution from initial consultancy through execution and commissioning phases.",
       scope: "Turn-key Solution (Consultancy, Execution, Commissioning)",
       cost: "200 Million"
@@ -47,7 +47,7 @@ const Projects = () => {
       id: 5,
       title: "Pharmaceutical Warehouse Office, Gujranwala",
       category: "Commercial",
-      image: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=600&auto=format&fit=crop",
+      image: "/public/lovable-uploads/86392433-b8ac-473c-a04e-7bb77caafe40.png",
       description: "Interior and infrastructure development including flooring, electrical, plumbing, and finishing works.",
       scope: "Flooring, Electrical, Plumbing, Finishing Works",
       cost: "10 Million"
@@ -132,7 +132,7 @@ const Projects = () => {
                     {project.description}
                   </p>
                   
-                  <div className="space-y-2 mb-4">
+                  <div className="space-y-2">
                     <div className="flex items-start">
                       <span className="text-xs font-medium text-primary mr-2">Scope:</span>
                       <span className="text-xs text-muted-foreground">{project.scope}</span>
@@ -142,25 +142,6 @@ const Projects = () => {
                       <span className="text-xs text-muted-foreground">{project.cost}</span>
                     </div>
                   </div>
-                  
-                  <a 
-                    href="#" 
-                    className="inline-flex items-center text-primary text-sm font-medium hover:underline"
-                  >
-                    View Details
-                    <svg 
-                      xmlns="http://www.w3.org/2000/svg" 
-                      className="h-4 w-4 ml-1" 
-                      viewBox="0 0 20 20" 
-                      fill="currentColor"
-                    >
-                      <path 
-                        fillRule="evenodd" 
-                        d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" 
-                        clipRule="evenodd" 
-                      />
-                    </svg>
-                  </a>
                 </div>
               </div>
             ))}

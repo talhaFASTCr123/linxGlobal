@@ -1,7 +1,10 @@
 
 import { Building, Home, Sofa, HardHat, Award, Shield } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
 
 const ServicesSection = () => {
+  const { toast } = useToast();
+
   const services = [
     {
       icon: <Building size={28} />,
@@ -30,6 +33,26 @@ const ServicesSection = () => {
     "DHA & Other Local Bodies"
   ];
 
+  const learningHubs = [
+    "UOL",
+    "UCP",
+    "UET",
+    "UMT"
+  ];
+
+  const copyToClipboard = (text: string, label: string) => {
+    navigator.clipboard.writeText(text)
+      .then(() => {
+        toast({
+          title: "Copied to clipboard",
+          description: `${label} has been copied to your clipboard.`,
+        });
+      })
+      .catch((err) => {
+        console.error('Failed to copy text: ', err);
+      });
+  };
+
   return (
     <section id="services" className="py-20 md:py-28 bg-muted/30">
       <div className="container mx-auto px-4 md:px-6">
@@ -38,7 +61,7 @@ const ServicesSection = () => {
             Our <span className="text-primary glow-text">Services</span>
           </h2>
           <div className="h-1 w-20 bg-primary mb-8 rounded glow"></div>
-          <p className="text-muted-foreground max-w-2xl text-lg">
+          <p className="text-muted-foreground max-w-3xl text-lg">
             We offer comprehensive turnkey solutions across construction, architecture, 
             and furniture design to meet all your needs under one roof with high-quality service & unique designs.
           </p>
@@ -73,7 +96,7 @@ const ServicesSection = () => {
         </div>
 
         {/* Affiliations Section */}
-        <div className="mb-16">
+        <div className="mb-10">
           <div className="flex flex-col items-center text-center mb-10">
             <div className="flex items-center justify-center mb-4">
               <Award size={28} className="text-primary mr-2" />
@@ -84,13 +107,36 @@ const ServicesSection = () => {
             <div className="h-1 w-16 bg-primary mb-6 rounded glow"></div>
           </div>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="flex flex-wrap justify-center gap-8 mb-12">
             {affiliations.map((affiliation, index) => (
               <div 
                 key={index}
-                className="gradient-border glassmorphism p-4 rounded-lg text-center transition-all duration-500 hover:translate-y-[-8px] hover:shadow-[0_0_20px_rgba(46,213,115,0.3)]"
+                className="text-white font-bold text-lg hover:text-primary transition-colors duration-300 cursor-pointer"
+                onClick={() => copyToClipboard(affiliation, "Affiliation name")}
               >
-                <p className="text-foreground">{affiliation}</p>
+                {affiliation}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Learning Hubs Section */}
+        <div className="mb-16">
+          <div className="flex flex-col items-center text-center mb-10">
+            <h2 className="text-2xl md:text-3xl font-bold mb-4">
+              Learning <span className="text-primary glow-text">Hubs</span>
+            </h2>
+            <div className="h-1 w-16 bg-primary mb-6 rounded glow"></div>
+          </div>
+          
+          <div className="flex flex-wrap justify-center gap-8">
+            {learningHubs.map((hub, index) => (
+              <div 
+                key={index}
+                className="text-white font-bold text-lg hover:text-primary transition-colors duration-300 cursor-pointer"
+                onClick={() => copyToClipboard(hub, "Learning hub name")}
+              >
+                {hub}
               </div>
             ))}
           </div>
