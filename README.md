@@ -32,8 +32,7 @@ vercel.json     # Deployment configuration for Vercel!
 ## 📷 Screenshots
 ![Homepage-1](https://github.com/user-attachments/assets/3a2c45a9-f9c1-4fa3-b0b0-c04d1480f8dd)
 ![Homepage-2](https://github.com/user-attachments/assets/8baf77b2-7835-4495-9dde-43b6eb9c5b18)
-
-[Projects Page](https://github.com/user-attachments/assets/be7f3a81-fb78-4c3a-a730-801df638675b)
+![Projects Page](https://github.com/user-attachments/assets/8c966f94-4967-491d-94c3-474e1d25f9d0)
 
 ## 🚀 Deployment
 The website is **live**. You can view it here:  
