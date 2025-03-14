@@ -1,7 +1,7 @@
 <h1 align="center">🌐 LinxGlobal - Corporate Website</h1>
 
 <p align="center">
-  <img src="https://via.placeholder.com/800x400?text=LinxGlobal+Showcase" alt="LinxGlobal Banner" width="80%">
+  <img src="logo.png" alt="LinxGlobal Banner" width="80%">
 </p>
 
 ## 🚀 About the Project
