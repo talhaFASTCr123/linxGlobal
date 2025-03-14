@@ -1,69 +1,43 @@
-# Welcome to your Lovable project
+<h1 align="center">🌐 LinxGlobal - Corporate Website</h1>
 
-## Project info
+<p align="center">
+  <img src="https://via.placeholder.com/800x400?text=LinxGlobal+Showcase" alt="LinxGlobal Banner" width="80%">
+</p>
 
-**URL**: https://lovable.dev/projects/c981c057-41a8-4101-8e58-91506ad8ea2b
+## 🚀 About the Project
 
-## How can I edit this code?
+LinxGlobal is a **modern, professional, and fully responsive** corporate website built using **HTML, CSS, and TypeScript (React/Next.js)**. The website is designed to provide an **elegant user experience** while showcasing the company's **services, projects, and brand identity**.
 
-There are several ways of editing your application.
+## 📌 Features
 
-**Use Lovable**
+✔️ **Responsive & Mobile-Friendly** – Optimized for all devices.  
+✔️ **Clean UI/UX Design** – Professional and modern interface.  
+✔️ **Fast Performance** – Optimized for speed and efficiency.  
+✔️ **SEO Optimized** – Improved visibility on search engines.  
+✔️ **Reusable Components** – Built with scalable and maintainable code.  
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/c981c057-41a8-4101-8e58-91506ad8ea2b) and start prompting.
+## 📂 Project Structure
 
-Changes made via Lovable will be committed automatically to this repo.
+/public # Static assets (images, icons, fonts) ├── /lovable-uploads # Uploaded images ├── /favicon.ico # Favicon for branding /src # Source code ├── /components # Reusable React components ├── /pages # Website pages ├── /styles # Global and component-specific styles .gitignore # Ignoring unnecessary files vercel.json # Deployment configuration for Vercel
 
-**Use your preferred IDE**
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 🛠️ Tech Stack
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- **Frontend:** React, Next.js, TypeScript, Tailwind CSS  
+- **Deployment:** Hosted on **Vercel** for seamless updates  
+- **Version Control:** Git & GitHub  
 
-Follow these steps:
+## 📷 Screenshots
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+<p align="center">
+  <img src="https://via.placeholder.com/800x400?text=Homepage+Screenshot" alt="Homepage Screenshot" width="80%">
+</p>
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+<p align="center">
+  <img src="https://via.placeholder.com/800x400?text=Projects+Page" alt="Projects Page" width="80%">
+</p>
 
-# Step 3: Install the necessary dependencies.
-npm i
+## 🚀 Deployment
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with .
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/c981c057-41a8-4101-8e58-91506ad8ea2b) and click on Share -> Publish.
-
-## I want to use a custom domain - is that possible?
-
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+The website is **live** and hosted on **Vercel**. You can view it here:  
+🔗 **[LinxGlobal Website](https://your-deployed-site.vercel.app/)**
