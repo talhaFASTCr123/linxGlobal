@@ -36,7 +36,7 @@ vercel.json     # Deployment configuration for Vercel!
 
 ## 🚀 Deployment
 The website is **live**. You can view it here:  
-🔗 **[LinxGlobal Website](https://your-deployed-site.vercel.app/)**
+🔗 **[LinxGlobal Website](linx.global)**
 
 ---
 🔹 *© 2025 LinxGlobal. All rights reserved.*
